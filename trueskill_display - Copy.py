@@ -1,16 +1,17 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
 import pandas as pd
 import streamlit as st
-
-# Set the page layout to wide
-st.set_page_config(layout="wide", page_title="PhotoFinish.Live Trueskill Ratings")
-
-
 
 # Load the dataset
 data = pd.read_csv("trueskill_table.csv")
 
 # App title
-st.title("PhotoFinish.Live Trueskill Ratings: Season 22 Juveniles")
+st.set_page_config(layout="wide", page_title="Season 22 Juveniles")
 
 # Search functionality
 search_query = st.text_input("Search by Horse Name:")
@@ -40,4 +41,10 @@ end_idx = start_idx + rows_per_page
 
 # Display the data without the index
 st.write(f"Showing rows {start_idx + 1} to {min(end_idx, total_rows)} of {total_rows}")
-st.dataframe(data.iloc[start_idx:end_idx].reset_index(drop=True), use_container_width=True)
+st.dataframe(data.iloc[start_idx:end_idx].reset_index(drop=True))
+
+
+
+
+
+
