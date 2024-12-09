@@ -10,7 +10,7 @@ st.set_page_config(layout="wide", page_title="PhotoFinish.Live Trueskill Ratings
 data = pd.read_csv("trueskill_table.csv")
 
 # App title
-st.title("PhotoFinish.Live Trueskill Ratings: Season 22 Juveniles")
+st.title("PhotoFinish.Live Trueskill Ratings: Season 22 Juveniles (Dec 9th 2024)")
 
 # Search functionality
 search_query = st.text_input("Search by Horse Name:")
